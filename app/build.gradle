@@ -1,0 +1,11 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        //classpath 'ihrthk.droidsonroids.gradle.localization:android-gradle-localization-plugin:1.0.8'
+        classpath 'org.greeting:greeting:0.0.1'
+    }
+
+}

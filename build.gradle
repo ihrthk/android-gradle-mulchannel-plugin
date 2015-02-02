@@ -1,0 +1,19 @@
+apply plugin: 'maven'
+apply plugin: 'groovy'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+}
+
+group = 'org.greeting'
+archivesBaseName = 'greeting'
+version = '0.0.1'
+
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
