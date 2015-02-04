@@ -9,3 +9,9 @@ buildscript {
     }
 
 }
+apply plugin:'mulchannel'
+
+mulchannel{
+    inputFile file('lite-cmxj-debug.apk')
+    outputDir file('out')
+}
