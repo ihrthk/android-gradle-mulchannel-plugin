@@ -2,5 +2,7 @@ package org.gradle
 
 class ConfigExtension {
     File inputFile
-    File ouputDir
+    File outputDir
+    File tempDir
+    List<String> channels
 }

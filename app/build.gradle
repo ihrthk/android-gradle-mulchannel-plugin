@@ -1,17 +1,18 @@
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
     }
     dependencies {
         //classpath 'ihrthk.droidsonroids.gradle.localization:android-gradle-localization-plugin:1.0.8'
-        classpath 'org.greeting:greeting:0.0.1'
+        classpath 'org.greeting:greeting:0.0.2'
     }
 
 }
-apply plugin:'mulchannel'
+apply plugin: 'mulchannel'
 
-mulchannel{
-    inputFile file('lite-cmxj-debug.apk')
-    outputDir file('out')
+mulchannel {
+    inputFile = file('lite-cmxj-debug.apk')
+    tempDir = file('temp')
+    outputDir = file('out')
+    channels = ["xiaomi","qihu360","baidu","wandoujia"]
 }
