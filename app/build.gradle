@@ -14,5 +14,5 @@ mulchannel {
     inputFile = file('lite-cmxj-debug.apk')
     tempDir = file('temp')
     outputDir = file('out')
-    channels = ["xiaomi","qihu360","baidu","wandoujia","anzhi","jicheng","googleplay","youyi","yingyongbao","anzhuo"]
+    channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
 }
