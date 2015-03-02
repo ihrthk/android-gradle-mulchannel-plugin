@@ -2,6 +2,8 @@
 
 Gradle plugin for multiple channel apks
 
+![demo](art/demo.png "dd")
+
 ## Contents
  * [Overview](#over_view )
  * [Supported features](#support_features)
