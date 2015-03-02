@@ -31,9 +31,7 @@ Generation has to be invoked as additions gradle task.
 
 3.Apply plugin and add configuration to build.gradle of the application, eg:
 
-    ```
     apply plugin: 'mulchannel'
-    ```
 
 4.Config mulchannel extension(inputFile,tempDir,outputDir,channels)
 
