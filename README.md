@@ -6,8 +6,8 @@ Gradle plugin for multiple channel apks
  * [Overview](#over_view )
  * [Supported features](#support_features)
  * [Use plugin](#use_plugin)
-        * [In Remote(Not need clone thie project to use)](#in_remote)
-        * [In Local(Need clone this project to use)](#(in_local))
+       * [In Remote(Not need clone thie project to use)](#in_remote)
+       * [In Local(Need clone this project to use)](#(in_local))
  * [License](#license)
 
 
