@@ -83,4 +83,4 @@ Generation has to be invoked as additions gradle task.
 ## <a id="license">License
 
 MIT License
-See LICENSE file.
+See [LICENSE](https://github.com/ihrthk/android-gradle-mulchannel-plugin/blob/master/LICENSE) file.
