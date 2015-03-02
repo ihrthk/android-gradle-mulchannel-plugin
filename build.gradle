@@ -1,6 +1,3 @@
-apply plugin: 'maven'
-apply plugin: 'groovy'
-
 buildscript {
     repositories {
         mavenLocal()
@@ -8,12 +5,57 @@ buildscript {
     }
 }
 
-group = 'me.zhangls'
-archivesBaseName = 'mulchannel'
-version = '0.0.1'
+plugins {
+    id 'nu.studer.plugindev' version '1.0.3'
+}
 
+
+apply plugin: 'maven'
+apply plugin: 'groovy'
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
+}
+
+
+
+group = 'me.zhangls'
+archivesBaseName = 'mulchannel'
+version = '0.0.1'
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: 'file:./plugin')
+    }
+}
+
+task javadocsJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocsJar
+}
+
+
+plugindev {
+    pluginImplementationClass 'me.zhangls.mulchannel.MulChannelPlugin'
+    pluginDescription 'Gradle plugin for generating multiple channel apks'
+    pluginLicenses 'MIT'
+    pluginTags 'gradle', 'plugin', 'multiple','channel'
+    authorId 'ihrthk'
+    authorName 'zhangls'
+    authorEmail 'ihrthk@gmail.com'
+    projectUrl 'https://github.com/ihrthk/android-gradle-mulchannel-plugin'
+    projectInceptionYear '2015'
+    done()
+}
+
+bintray {
+    user = 'ihrthk'
+    key = ''
+    pkg.repo = 'gradle-plugins'
 }
