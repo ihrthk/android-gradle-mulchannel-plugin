@@ -19,6 +19,7 @@ Generation has to be invoked as additions gradle task.
 1.Use gradle install command,To install the plug in local maven
 
 2.Add dependency to the top-level build.gradle file.
+
     ```
     buildscript {
         repositories {
@@ -31,6 +32,7 @@ Generation has to be invoked as additions gradle task.
     ```
 
 3.Apply plugin and add configuration to build.gradle of the application, eg:
+
     ```
     apply plugin: 'mulchannel'
     ```
