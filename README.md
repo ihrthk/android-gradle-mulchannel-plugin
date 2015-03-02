@@ -18,7 +18,7 @@ Gradle plugin for multiple channel apks
 This plugin generates multiple apks from different channel.
 Generation has to be invoked as additions gradle task.
 
-## <a id="support_features">Supported features
+## <a id="support_features"/>Supported features
 
  * inputFile-config input file
  * tempDir-config unzip dir
