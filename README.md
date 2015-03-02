@@ -51,7 +51,7 @@ Generation has to be invoked as additions gradle task.
     }
 
 4.Use `gradle mulchannel` to make multiple channel apks
-### <a id="in_local"></a>In Local(Need clone this project to use)
+### <a id="in_local"/>In Local(Need clone this project to use)
 
 1.Use `gradle install` command,To install the plug in local maven
 
