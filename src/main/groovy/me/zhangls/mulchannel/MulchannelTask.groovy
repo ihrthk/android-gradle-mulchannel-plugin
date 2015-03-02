@@ -1,4 +1,4 @@
-package org.gradle
+package me.zhangls.mulchannel
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction

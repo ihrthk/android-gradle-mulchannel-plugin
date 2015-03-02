@@ -1,4 +1,4 @@
-package org.gradle
+package me.zhangls.mulchannel
 
 import org.junit.Test
 import org.gradle.testfixtures.ProjectBuilder
@@ -7,10 +7,10 @@ import static org.junit.Assert.*
 
 class MulChannelPluginTest {
     @Test
-    public void greeterPluginAddsGreetingTaskToProject() {
+    public void mulchannelPluginAddsMulchannelTaskToProject() {
         Project project = ProjectBuilder.builder().build()
-        project.apply plugin: 'org.samples.greeting'
+        project.apply plugin: 'mulchannel'
 
-        assertTrue(project.tasks.hello instanceof GreetingTask)
+        assertTrue(project.tasks.mulchannel instanceof MulchannelTask)
     }
 }

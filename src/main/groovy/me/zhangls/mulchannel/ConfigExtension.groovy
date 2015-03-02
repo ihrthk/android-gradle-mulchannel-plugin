@@ -1,4 +1,4 @@
-package org.gradle
+package me.zhangls.mulchannel
 
 class ConfigExtension {
     /**
