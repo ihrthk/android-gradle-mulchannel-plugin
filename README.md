@@ -25,8 +25,8 @@ Generation has to be invoked as additions gradle task.
  * outputDir-config output dir
  * channels-config multiple channels
 
-## <a id="use_plugin">Use plugin
-### <a id="in_remote">In Remote(Not need clone thie project to use)
+## <a id="use_plugin"/>Use plugin
+### <a id="in_remote"/>In Remote(Not need clone thie project to use)
 1.Add dependency to the __top-level__ `build.gradle` file.
     
     buildscript {
@@ -51,7 +51,7 @@ Generation has to be invoked as additions gradle task.
     }
 
 4.Use `gradle mulchannel` to make multiple channel apks
-### <a id="in_local">In Local(Need clone this project to use)
+### <a id="in_local"/>In Local(Need clone this project to use)
 
 1.Use `gradle install` command,To install the plug in local maven
 
