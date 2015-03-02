@@ -5,7 +5,6 @@ buildscript {
     dependencies {
         classpath 'me.zhangls:mulchannel:0.0.1'
     }
-
 }
 apply plugin: 'mulchannel'
 
