@@ -3,23 +3,28 @@
 Gradle plugin for multiple channel apks
 
 ## Contents
- * [Overview](#Overview)
+ * [Overview](#over_view )
+ * [Supported features](#support_features)
+ * [Use plugin](#use_plugin)
+        * [In Remote(Not need clone thie project to use)](#in_remote)
+        * [In Local(Need clone this project to use)](#(in_local))
+ * [License](#license)
 
 
-## <a id="Overview"></a>Overview
+## <a id="over_view"></a>Overview
 
 This plugin generates multiple apks from different channel.
 Generation has to be invoked as additions gradle task.
 
-##Supported features
+## <a id="support_features">Supported features
 
  * inputFile-config input file
  * tempDir-config unzip dir
  * outputDir-config output dir
  * channels-config multiple channels
 
-##Use plugin
-###In Remote(Not need clone thie project to use)
+## <a id="use_plugin">Use plugin
+### <a id="in_remote">In Remote(Not need clone thie project to use)
 1.Add dependency to the __top-level__ `build.gradle` file.
     
     buildscript {
@@ -44,7 +49,7 @@ Generation has to be invoked as additions gradle task.
     }
 
 4.Use `gradle mulchannel` to make multiple channel apks
-###In Local(Need clone this project to use)
+### <a id="in_local">In Local(Need clone this project to use)
 
 1.Use `gradle install` command,To install the plug in local maven
 
@@ -75,7 +80,7 @@ Generation has to be invoked as additions gradle task.
 5.Use `gradle mulchannel` to make multiple channel apks
 
 
-##License
+## <a id="license">License
 
 MIT License
 See LICENSE file.
