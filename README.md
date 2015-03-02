@@ -15,6 +15,7 @@ Generation has to be invoked as additions gradle task.
  * channels-config multiple channels
 
 ##Use plugin
+###In Local(Need clone this project)
 
 1.Use `gradle install` command,To install the plug in local maven
 
@@ -43,6 +44,31 @@ Generation has to be invoked as additions gradle task.
     }
 
 5.Use `gradle mulchannel` to make multiple channel apks
+###In Remote(Not need clone thie project)
+1.Add dependency to the __top-level__ `build.gradle` file.
+    
+    buildscript {
+        repositories {
+            jcenter()
+        }
+        dependencies {
+            classpath ' classpath 'me.zhangls:android-mulchannel-plugin:0.0.1''
+        }
+    }
+2.Apply plugin and add configuration to `build.gradle` of the application, eg:
+
+    apply plugin: 'mulchannel'
+    
+3.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
+
+    mulchannel {
+        inputFile = file('lite-cmxj-debug.apk')
+        tempDir = file('temp')
+        outputDir = file('out')
+        channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
+    }
+
+4.Use `gradle mulchannel` to make multiple channel apks
 
 ##License
 
