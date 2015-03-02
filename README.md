@@ -16,9 +16,9 @@ Generation has to be invoked as additions gradle task.
 
 ##Use plugin
 
-1.Use gradle install command,To install the plug in local maven
+1.Use `gradle install` command,To install the plug in local maven
 
-2.Add dependency to the top-level build.gradle file.
+2.Add dependency to the __top-level__ `build.gradle` file.
     
     buildscript {
         repositories {
@@ -29,13 +29,20 @@ Generation has to be invoked as additions gradle task.
         }
     }
 
-3.Apply plugin and add configuration to build.gradle of the application, eg:
+3.Apply plugin and add configuration to `build.gradle` of the application, eg:
 
     apply plugin: 'mulchannel'
 
-4.Config mulchannel extension(inputFile,tempDir,outputDir,channels)
+4.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
 
-5.Use gradle mulchannel to make multiple channel apks
+    mulchannel {
+        inputFile = file('lite-cmxj-debug.apk')
+        tempDir = file('temp')
+        outputDir = file('out')
+        channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
+    }
+
+5.Use `gradle mulchannel` to make multiple channel apks
 
 ##License
 
