@@ -82,7 +82,7 @@ Generation has to be invoked as additions gradle task.
 5.Use `gradle mulchannel` to make multiple channel apks
 
 
-## <a id="license">License
+## <a id="license"/>License
 
 MIT License
 See [LICENSE](https://github.com/ihrthk/android-gradle-mulchannel-plugin/blob/master/LICENSE) file.
