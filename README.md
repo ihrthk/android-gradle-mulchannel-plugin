@@ -120,13 +120,14 @@ Generation has to be invoked as additions gradle task.
         } else {
             return "";
         }
-    }
+      }
 
 ## <a id="set_channel"/>Set channel
-    Will `<meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>`
+
+    Will <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
     Channel ID replace the name of the marketing channels you apply
+    e.g. <meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>
     
-    e.g. `<meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>`
     If you don't want to in _AndroidManifest.xml_ to config channel of _umeng_,you can also in _Activity_ to config.
     Please in launch activity to involved this method:AnalyticsConfig.setChannel(String channel)
 
