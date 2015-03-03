@@ -132,7 +132,7 @@ Generation has to be invoked as additions gradle task.
    If you don't want to in __AndroidManifest.xml__ to config channel of __umeng__,you can also in __Activity__ to config.<br>
    Please in launch activity to involved this method:`AnalyticsConfig.setChannel(String channel)`
 
-## <a id=check_signature"/>Check signature
+## <a id="check_signature"/>Check signature
    
    [keytool -list -printcert -jarfile app.apk](http://stackoverflow.com/questions/11331469/how-to-find-out-which-key-was-used-to-sign-an-app)<br>
    The output will reveal the signature owner/issuer and MD5, SHA1 and SHA256 fingerprints.
