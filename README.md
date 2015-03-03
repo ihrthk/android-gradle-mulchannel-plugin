@@ -12,6 +12,7 @@ Gradle plugin for multiple channel apks
        * [In Local(Need clone this project to use)](#in_local)
  * [Get channel](#get_channel)
  * [Set channel](#set_channel)
+ * [Check signature](#check_signature)
  * [License](#license)
 
 
