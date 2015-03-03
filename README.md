@@ -124,18 +124,20 @@ Generation has to be invoked as additions gradle task.
 
 ## <a id="set_channel"/>Set channel
 
-    Will <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
-    Channel ID replace the name of the marketing channels you apply
-    e.g. <meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>
+   Will `<meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>`<br>
+   Channel ID replace the name of the marketing channels you apply<br>
+   e.g. `<meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>`<br>
     
-    If you don't want to in _AndroidManifest.xml_ to config channel of _umeng_,you can also in _Activity_ to config.
-    Please in launch activity to involved this method:AnalyticsConfig.setChannel(String channel)
+   If you don't want to in __AndroidManifest.xml__ to config channel of __umeng__,you can also in __Activity__ to config.<br>
+   Please in launch activity to involved this method:`AnalyticsConfig.setChannel(String channel)`
 
-## Check signature
-    [keytool -list -printcert -jarfile app.apk](http://stackoverflow.com/questions/11331469/how-to-find-out-which-key-was-used-to-sign-an-app)
-    The output will reveal the signature owner/issuer and MD5, SHA1 and SHA256 fingerprints.
+## <a id=check_signature"/>Check signature
+   
+   [keytool -list -printcert -jarfile app.apk](http://stackoverflow.com/questions/11331469/how-to-find-out-which-key-was-used-to-sign-an-app)<br>
+   The output will reveal the signature owner/issuer and MD5, SHA1 and SHA256 fingerprints.
+    
 
 ## <a id="license"/>License
 
-MIT License
-See [LICENSE](https://github.com/ihrthk/android-gradle-mulchannel-plugin/blob/master/LICENSE) file.
+   MIT License
+   See [LICENSE](https://github.com/ihrthk/android-gradle-mulchannel-plugin/blob/master/LICENSE) file.
