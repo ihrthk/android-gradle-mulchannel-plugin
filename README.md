@@ -29,7 +29,7 @@ Generation has to be invoked as additions gradle task.
  * channels-config multiple channels
 
 ## <a id="use_plugin"/>Use plugin
-### <a id="in_remote"/>In Remote(Not need clone thie project to use)
+### <a id="in_remote"/>In Remote(Not need clone thie project to use,require gradle 2.1)
 1.Add plugin declare in __build.gradle__ file
 
     plugins {
