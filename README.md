@@ -30,21 +30,13 @@ Generation has to be invoked as additions gradle task.
 
 ## <a id="use_plugin"/>Use plugin
 ### <a id="in_remote"/>In Remote(Not need clone thie project to use)
-1.Add dependency to the __top-level__ `build.gradle` file.
-    
-    buildscript {
-        repositories {
-            jcenter()
-        }
-        dependencies {
-            classpath ' classpath 'me.zhangls:android-mulchannel-plugin:0.0.1''
-        }
-    }
-2.Apply plugin and add configuration to `build.gradle` of the application, eg:
+1.Add plugin declare in __build.gradle__ file
 
-    apply plugin: 'mulchannel'
+    plugins {
+      id "me.zhangls.mulchannel" version "0.0.1"
+    }
     
-3.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
+2.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
 
     mulchannel {
         inputFile = file('lite-cmxj-debug.apk')
@@ -53,7 +45,7 @@ Generation has to be invoked as additions gradle task.
         channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
     }
 
-4.Use `gradle mulchannel` to make multiple channel apks
+3.Use `gradle mulchannel` to make multiple channel apks
 ### <a id="in_local"/>In Local(Need clone this project to use)
 
 1.Use `gradle install` command,To install the plug in local maven
