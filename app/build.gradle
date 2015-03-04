@@ -1,3 +1,8 @@
+//in remote
+//plugins {
+//    id "me.zhangls.mulchannel" version "0.0.1"
+//}
+//in local
 buildscript {
     repositories {
         mavenLocal()
