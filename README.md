@@ -89,7 +89,7 @@ Generation has to be invoked as additions gradle task.
             while (entries.hasMoreElements()) {
                 ZipEntry entry = ((ZipEntry) entries.nextElement());
                 String entryName = entry.getName();
-                if (entryName.startsWith("mtchannel")) {
+                if (entryName.startsWith("channel")) {
                     ret = entryName;
                     break;
                 }
