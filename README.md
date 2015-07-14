@@ -8,6 +8,7 @@ Gradle plugin for multiple channel apks
  * [Overview](#over_view )
  * [Supported features](#support_features)
  * [Theory]("theory")
+ * [Testing]("testing")
  * [Use plugin](#use_plugin)
        * [In Remote(Not need clone thie project to use,require gradle 2.1)](#in_remote)
        * [In Local(Need clone this project to use)](#in_local)
@@ -32,6 +33,11 @@ Generation has to be invoked as additions gradle task.
 ## <a id="theory"></a>Theory
 
 If adding empty file in "META-INF" directory, do not need to sign the application.Therefore, by adding different empty file for the application of the different channels, can be the only one channel.
+
+## <a id="testing"></a>Testing
+
+![demo](art/test.png "test")
+Rate = 10apk/20sec(300apk/10min)
 
 ## <a id="use_plugin"/>Use plugin
 ### <a id="in_remote"/>In Remote(Not need clone thie project to use,require gradle 2.1)
