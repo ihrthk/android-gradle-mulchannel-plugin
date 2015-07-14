@@ -7,8 +7,8 @@ Gradle plugin for multiple channel apks
 ## Contents
  * [Overview](#over_view )
  * [Supported features](#support_features)
- * [Theory]("theory")
- * [Testing]("testing")
+ * [Theory](#theory)
+ * [Testing](#testing)
  * [Use plugin](#use_plugin)
        * [In Remote(Not need clone thie project to use,require gradle 2.1)](#in_remote)
        * [In Local(Need clone this project to use)](#in_local)
