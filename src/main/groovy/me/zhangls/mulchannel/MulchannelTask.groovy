@@ -5,6 +5,21 @@ import org.gradle.api.tasks.TaskAction
 
 class MulchannelTask extends DefaultTask {
 
+    {
+    group = 'mulchannel'
+    description = """Gradle plugin for generating multiple channel apks
+    See https://github.com/ihrthk/android-gradle-mulchannel-plugin#configuration for more information.
+    Available configuration options and default values:
+    //source apk file
+    File inputFile
+    //decompress dir
+    File tempDir
+    //output dir
+    File outputDir
+    //multiple channel
+    List<String> channels"""
+    }
+
     File DEFAULT_TEMP = new File(project.getProjectDir(), "temp")
 
     @TaskAction
