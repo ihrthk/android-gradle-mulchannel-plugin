@@ -29,9 +29,9 @@ Generation has to be invoked as additions gradle task.
  * outputDir-config output dir
  * channels-config multiple channels
 
-## <a id="theory></a>Theory
+## <a id="theory"></a>Theory
 
-If adding empty file in meta-inf directory, do not need to sign the application.Therefore, by adding different empty file for the application of the different channels, can be the only one channel.
+If adding empty file in "META-INF" directory, do not need to sign the application.Therefore, by adding different empty file for the application of the different channels, can be the only one channel.
 
 ## <a id="use_plugin"/>Use plugin
 ### <a id="in_remote"/>In Remote(Not need clone thie project to use,require gradle 2.1)
