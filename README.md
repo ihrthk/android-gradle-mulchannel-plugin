@@ -44,7 +44,7 @@ Rate = 10apk/20sec(300apk/10min)
 1.Add plugin declare in __build.gradle__ file
 
     plugins {
-      id "me.zhangls.mulchannel" version "0.0.1"
+      id "me.zhangls.mulchannel" version "0.0.2"
     }
     
 2.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
@@ -68,7 +68,7 @@ Rate = 10apk/20sec(300apk/10min)
             mavenLocal()
         }
         dependencies {
-            classpath 'me.zhangls:mulchannel:0.0.1'
+            classpath 'me.zhangls:mulchannel:0.0.2'
         }
     }
 
