@@ -8,13 +8,13 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'me.zhangls:mulchannel:0.0.1'
+        classpath 'me.zhangls:mulchannel:0.0.2'
     }
 }
 apply plugin: 'mulchannel'
 
 mulchannel {
-    inputFile = file('lite-cmxj-debug.apk')
+    inputFile = file('anzhishichang_5700.apk')
     tempDir = file('temp')
     outputDir = file('out')
     channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]

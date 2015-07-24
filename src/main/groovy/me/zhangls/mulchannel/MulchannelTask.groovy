@@ -30,6 +30,12 @@ class MulchannelTask extends DefaultTask {
         if (config.inputFile == null || !config.inputFile.exists()) {
             throw new Exception("Not found inputFile,please to config")
         }
+        try {
+            def inputFilePath = config.inputFile.getAbsolutePath()
+            println(("keytool -list -printcert -jarfile " + inputFilePath).execute().text);
+        } catch (IOException e) {
+            println(e)
+        }
         def temp = config.tempDir == null ? DEFAULT_TEMP : config.tempDir;
         def ant = new AntBuilder();
         ant.unzip(src: config.inputFile, dest: temp)
