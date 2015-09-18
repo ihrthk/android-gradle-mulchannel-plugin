@@ -1,12 +1,11 @@
 buildscript {
     repositories {
-        mavenLocal()
         jcenter()
     }
 }
 
 plugins {
-    id 'nu.studer.plugindev' version '1.0.3'
+    id 'nu.studer.plugindev' version '1.0.4'
 }
 
 
@@ -39,7 +38,6 @@ artifacts {
     archives sourcesJar
     archives javadocsJar
 }
-
 
 plugindev {
     pluginImplementationClass 'me.zhangls.mulchannel.MulChannelPlugin'
