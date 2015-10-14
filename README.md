@@ -100,7 +100,7 @@ Rate = 10apk/20sec(300apk/10min)
             while (entries.hasMoreElements()) {
                 ZipEntry entry = ((ZipEntry) entries.nextElement());
                 String entryName = entry.getName();
-                if (entryName.startsWith("channel")) {
+                if (entryName.startsWith("META-INF/mulchannel")) {
                     ret = entryName;
                     break;
                 }
