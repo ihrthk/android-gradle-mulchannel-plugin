@@ -97,6 +97,7 @@ Rate = 10apk/20sec(300apk/10min)
 
 ## <a id="get_channel"/>Get channel
 
+```java
       public static String getChannel(Context context) {
         ApplicationInfo appinfo = context.getApplicationInfo();
         String sourceDir = appinfo.sourceDir;
@@ -133,6 +134,7 @@ Rate = 10apk/20sec(300apk/10min)
             return "";
         }
       }
+```
 
 ## <a id="set_channel"/>Set channel
 
