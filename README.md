@@ -43,6 +43,14 @@ Rate = 10apk/20sec(300apk/10min)
 ### <a id="in_remote"/>In Remote(Not need clone thie project to use,require gradle 2.1)
 1.Add plugin declare in __build.gradle__ file
 
+    buildscript {
+      repositories {
+        mavenLocal()
+        jcenter {
+            url 'http://jcenter.bintray.com'
+        }
+      }
+    }
     plugins {
       id "me.zhangls.mulchannel" version "0.0.2"
     }
