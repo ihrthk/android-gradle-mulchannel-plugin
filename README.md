@@ -85,18 +85,18 @@ Rate = 10apk/20sec(300apk/10min)
     apply plugin: 'mulchannel'
 
 4.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
-
+```java
     mulchannel {
         inputFile = file('lite-cmxj-debug.apk')
         tempDir = file('temp')
         outputDir = file('out')
         channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
     }
+```
 
 5.Use `gradle mulchannel` to make multiple channel apks
 
 ## <a id="get_channel"/>Get channel
-
 ```java
 public static String getChannel(Context context) {
   ApplicationInfo appinfo = context.getApplicationInfo();
