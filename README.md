@@ -85,6 +85,7 @@ Rate = 10apk/20sec(300apk/10min)
     apply plugin: 'mulchannel'
 
 4.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
+
     mulchannel {
         inputFile = file('lite-cmxj-debug.apk')
         tempDir = file('temp')
@@ -97,42 +98,42 @@ Rate = 10apk/20sec(300apk/10min)
 
 ## <a id="get_channel"/>Get channel
 
-public static String getChannel(Context context) {
-  ApplicationInfo appinfo = context.getApplicationInfo();
-  String sourceDir = appinfo.sourceDir;
-  String ret = "";
-  ZipFile zipfile = null;
-  try {
-      zipfile = new ZipFile(sourceDir);
-      Enumeration<?> entries = zipfile.entries();
-      while (entries.hasMoreElements()) {
-          ZipEntry entry = ((ZipEntry) entries.nextElement());
-          String entryName = entry.getName();
-          if (entryName.startsWith("META-INF/mulchannel")) {
-              ret = entryName;
-              break;
-          }
+      public static String getChannel(Context context) {
+        ApplicationInfo appinfo = context.getApplicationInfo();
+        String sourceDir = appinfo.sourceDir;
+        String ret = "";
+        ZipFile zipfile = null;
+        try {
+            zipfile = new ZipFile(sourceDir);
+            Enumeration<?> entries = zipfile.entries();
+            while (entries.hasMoreElements()) {
+                ZipEntry entry = ((ZipEntry) entries.nextElement());
+                String entryName = entry.getName();
+                if (entryName.startsWith("META-INF/mulchannel")) {
+                    ret = entryName;
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (zipfile != null) {
+                try {
+                    zipfile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+      
+        String[] split = ret.split("_");
+        if (split != null && split.length >= 2) {
+            return ret.substring(split[0].length() + 1);
+      
+        } else {
+            return "";
+        }
       }
-  } catch (IOException e) {
-      e.printStackTrace();
-  } finally {
-      if (zipfile != null) {
-          try {
-              zipfile.close();
-          } catch (IOException e) {
-              e.printStackTrace();
-          }
-      }
-  }
-
-  String[] split = ret.split("_");
-  if (split != null && split.length >= 2) {
-      return ret.substring(split[0].length() + 1);
-
-  } else {
-      return "";
-  }
-}
 
 ## <a id="set_channel"/>Set channel
 
