@@ -44,7 +44,7 @@ Rate = 10apk/20sec(300apk/10min)
 1.Add plugin declare in __build.gradle__ file
 
     plugins {
-      id "me.zhangls.mulchannel" version "0.0.2"
+      id "me.zhangls.mulchannel" version "0.2"
     }
     
 2.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
@@ -63,18 +63,19 @@ Rate = 10apk/20sec(300apk/10min)
 
 2.Add dependency to the __top-level__ `build.gradle` file.
     
-    buildscript {
+      buildscript {
         repositories {
-            mavenLocal()
+          maven {
+            url "https://plugins.gradle.org/m2/"
+          }
         }
         dependencies {
-            classpath 'me.zhangls:mulchannel:0.0.2'
+          classpath "gradle.plugin.me.zhangls:android-gradle-mulchannel-plugin:0.2"
         }
-    }
-
+      }
 3.Apply plugin and add configuration to `build.gradle` of the application, eg:
 
-    apply plugin: 'mulchannel'
+    apply plugin: 'me.zhangls.mulchannel'
 
 4.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
 
@@ -84,6 +85,7 @@ Rate = 10apk/20sec(300apk/10min)
         outputDir = file('out')
         channels = ["qihu360","baidu","yingyongbao","wandoujia","taobao","xiaomi","nearme","anzhuo","anzhi","meizu"]
     }
+
 
 5.Use `gradle mulchannel` to make multiple channel apks
 
@@ -100,7 +102,7 @@ Rate = 10apk/20sec(300apk/10min)
             while (entries.hasMoreElements()) {
                 ZipEntry entry = ((ZipEntry) entries.nextElement());
                 String entryName = entry.getName();
-                if (entryName.startsWith("channel")) {
+                if (entryName.startsWith("META-INF/mulchannel")) {
                     ret = entryName;
                     break;
                 }
@@ -116,11 +118,11 @@ Rate = 10apk/20sec(300apk/10min)
                 }
             }
         }
-
+      
         String[] split = ret.split("_");
         if (split != null && split.length >= 2) {
             return ret.substring(split[0].length() + 1);
-
+      
         } else {
             return "";
         }
