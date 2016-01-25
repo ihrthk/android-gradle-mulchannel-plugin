@@ -43,16 +43,8 @@ Rate = 10apk/20sec(300apk/10min)
 ### <a id="in_remote"/>In Remote(Not need clone thie project to use,require gradle 2.1)
 1.Add plugin declare in __build.gradle__ file
 
-    buildscript {
-      repositories {
-        mavenLocal()
-        jcenter {
-            url 'http://jcenter.bintray.com'
-        }
-      }
-    }
     plugins {
-      id "me.zhangls.mulchannel" version "0.0.2"
+      id "me.zhangls.mulchannel" version "0.2"
     }
     
 2.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
@@ -71,18 +63,19 @@ Rate = 10apk/20sec(300apk/10min)
 
 2.Add dependency to the __top-level__ `build.gradle` file.
     
-    buildscript {
+      buildscript {
         repositories {
-            mavenLocal()
+          maven {
+            url "https://plugins.gradle.org/m2/"
+          }
         }
         dependencies {
-            classpath 'me.zhangls:mulchannel:0.0.2'
+          classpath "gradle.plugin.me.zhangls:android-gradle-mulchannel-plugin:0.2"
         }
-    }
-
+      }
 3.Apply plugin and add configuration to `build.gradle` of the application, eg:
 
-    apply plugin: 'mulchannel'
+    apply plugin: 'me.zhangls.mulchannel'
 
 4.Config mulchannel extension(inputFile,tempDir,outputDir,channels),eg:
 
